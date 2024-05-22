@@ -8,6 +8,18 @@ int main(){
 
     arquivo = fopen("nome_arquivo.txt" , "w");
 
+    //Verificando se o arquivo foi aberto
+    
+    if(arquivo!=NULL)
+    {
+      printf("ARQUIVO ABERTO COM SUCESSO\n");
+
+    }
+    else 
+    {
+      return -1;
+    }
+
     /*
     
      1)Declarar um ponteiro do tipo FILE e realizar a abertura do arquivo .txt , atráves do comando :
