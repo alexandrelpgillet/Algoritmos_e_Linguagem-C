@@ -1,0 +1,28 @@
+
+Desenvolva um programa em linguagem C que leia um arquivo de texto fornecido pelo usuário e conte o número de palavras contidas no arquivo. Uma palavra é definida como uma sequência de caracteres separada por espaços em branco.
+
+-Requisitos:
+
+1)O programa deve solicitar ao usuário que insira o nome do arquivo de texto a ser analisado;
+
+2)O programa deve ler o conteúdo do arquivo de texto e contar o número de palavras contidas nele;
+
+3)O programa deve exibir na tela o número total de palavras encontradas no arquivo;
+
+4)Regras:
+
+-Uma palavra é definida como uma sequência de caracteres alfanuméricos (letras ou números) separada por espaços em branco;
+
+-Caracteres especiais, como pontuação (., !, ?, etc.) devem ser tratados como parte das palavras;
+
+-Não é necessário distinguir maiúsculas de minúsculas ao contar as palavras.
+
+****Dicas:
+
+-Utilize a função fopen() para abrir o arquivo de texto em modo de leitura.
+
+-Utilize a função fscanf() ou fgets() para ler o conteúdo do arquivo palavra por palavra ou linha por linha.
+
+-Utilize funções de manipulação de strings, como strtok() ou funções personalizadas, para separar as palavras do texto.
+
+-Mantenha uma contagem do número de palavras encontradas durante a leitura do arquivo.
