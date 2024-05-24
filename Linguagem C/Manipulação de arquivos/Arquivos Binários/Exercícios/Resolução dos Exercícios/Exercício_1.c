@@ -39,7 +39,8 @@ int main()
     arquivo_txt = fopen("produtos.txt" , "w+");
 
     Lista = malloc(sizeof(Produto)*10000);
-
+    
+    //LENDO TODAS AS INFORMAÇÔES DE ENTRADA DO PRODUTO  ATÉ O FIM DO ARQUIVO E IMPRIMINDO ESSAS INFORMAÇÕES NO ARQUIVO produtos.txt
     while(scanf("%d %[^\n] %d %f" , &id_aux , nome_aux , &quantidade_aux , &preco_aux)!=EOF)
     {
         
@@ -50,9 +51,10 @@ int main()
 
 
 
-
+    //RETORNANDO O PONTEIRO DO ARQUIVO produto.txt PARA O INICIO DELE
     rewind(arquivo_txt);
-
+    
+    //LENDO ATÉ o EOF DO ARQUIVO produtos.txt E ARMAZENANDO OS DADOS DE FORMA  DINÂMICA  VIA REGISTRO DO TIPO Produto *Lista
     while(!feof(arquivo_txt))
     {   
         i2 = 0;
@@ -80,24 +82,27 @@ int main()
 
     }
 
-
+    //NECESSÁRIA SUBTRAIR 1 do INDICE  , UMA VEZ QUE  o LOOP !FEOF() SEMPRE INCREMENTA +1 ALÈM DO NECESSÁRIO
     i--;
+
+    //FECHANDO O ARQUIVO produtos.txt
     fclose(arquivo_txt);
 
 
     arquivo_binario = fopen("produtos.bin" , "w+b");
     
-    
+    //ESCREVENDO O REGISTRO DO TIPO Produtos *Lista no arquivo produtos.bin
     for(i=i ; i>0 ; i--)
     {   
     
         fwrite((Lista+i-1) , sizeof(Produto), 1 , arquivo_binario);
     }
-
+    
+    //MOVENDO O PONTEIRO DE LEITURA E ESCRITA  PARA O INICIO DO ARQUIVO  
     rewind(arquivo_binario);
 
     
-
+    //LENDO TODO O ARQUIVO BINARIO E ARMAZENADO O REGISTRO ENCONTRADO EM UM REGISTRO AUXILIAR DO TIPO PRODUTO 
     while(fread(&Aux , sizeof(Produto) , 1, arquivo_binario))
     {
         
