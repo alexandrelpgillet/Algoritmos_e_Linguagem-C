@@ -1,0 +1,6 @@
+
+QUESTÂO 1 )Escrever um programa que leia do usuário os nomes de 2 arquivos texto. Em seguida, crie um terceiro arquivo texto com com o conteúdo dos dois primeiros juntos (o conteúdo do primeiro seguido do conteúdo do segundo);
+
+
+QUESTÃO 2 )Escrever um programa que leia um arquivo texto contendo uma lista de compras. Cada linha do arquivo possui nome, quantidade e valor unitario do produto. O programa então deve exibir o total de compras.
+
