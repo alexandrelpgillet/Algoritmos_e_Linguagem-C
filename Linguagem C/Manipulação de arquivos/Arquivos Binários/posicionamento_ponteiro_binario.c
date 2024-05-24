@@ -55,6 +55,9 @@ int main()
    rewind(arquivo_binario);
 
 
+   fclose(arquivo_binario);
+
+
 
   
     
