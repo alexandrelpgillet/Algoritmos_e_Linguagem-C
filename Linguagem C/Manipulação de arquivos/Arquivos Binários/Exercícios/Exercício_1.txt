@@ -1,0 +1,23 @@
+Os alunos devem implementar um programa em C que realiza as seguintes operações:
+
+1)Criar um arquivo de texto para armazenar dados de produtos.
+2)Ler os dados do arquivo de texto e escrever em um arquivo binário.
+3)Ler os dados do arquivo binário e exibi-los na tela.
+
+-Cada produto tem as seguintes informações:
+*ID do Produto (inteiro)
+*Nome do Produto (string)
+*Quantidade (inteiro)
+*Preço (float)
+
+-Tarefas:
+1)Criar o Arquivo de Texto:
+2)Escreva um programa que solicita ao usuário que insira informações sobre vários produtos.
+3)Salve essas informações em um arquivo de texto chamado "produtos.txt", onde cada linha representa um produto.
+
+4)Ler o Arquivo de Texto e Escrever no Arquivo Binário:
+5)Escreva um programa que lê os dados do arquivo "produtos.txt".
+6)Converta os dados lidos em um formato binário e escreva em um arquivo chamado "produtos.bin".
+
+7)Ler o Arquivo Binário e Exibir os Dados:
+Escreva um programa que lê os dados do arquivo "produtos.bin" e exibe as informações dos produtos na tela.
