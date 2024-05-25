@@ -1,0 +1,1 @@
+Criar as funções, LEFT e RIGHT , que retornem a subacadeia de n elementos a partir a esquerda e da direita respectivamente . Ex cad = "transformar" . Mostrar os 3 primeiros caracteres a partir da esquerdar : "tra" . Mostrar os 5 primeiros caracteres a partir da direita : "ormar"

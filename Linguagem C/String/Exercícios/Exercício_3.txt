@@ -1,0 +1,1 @@
+3)Criar uma função que elimine os espaços em branco de uma cadeia de caracteres
