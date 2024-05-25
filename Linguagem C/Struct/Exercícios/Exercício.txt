@@ -1,0 +1,11 @@
+
+1)Implemente um TAD(Tipo abstrato de dados - struct) conta bancária com campos número e saldo que suporte as as seguintes operações:
+  
+  - Iniciar uma nova conta com um número e saldo
+  - Depositar um valor na conta
+  - Sacar um valor da conta
+  - Imprimir o saldo
+
+
+
+Testar o TAD
