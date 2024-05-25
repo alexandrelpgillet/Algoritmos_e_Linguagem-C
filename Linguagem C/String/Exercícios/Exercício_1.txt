@@ -1,0 +1,1 @@
+1)Criar uma função que receba uma string e que gere outra string com a ordem inversa dos caracteres . Ex "alem" deve ser gerado "mela"
