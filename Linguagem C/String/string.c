@@ -19,7 +19,6 @@
     
     */
 
-   
    /*
    
    -FORMAS DE LER UMA STRING
@@ -51,7 +50,7 @@
 
      strncpy(string 1 , "Ola Mundo" , 3) = copia X caracteres da string 2 para a string1 = "Ola";
 
-     strcmp("Abacate", "Bola") = retorna um valor int de acordo com a comparação de cada caracter das duas string's pela tabela ASCII , caso string1>string2 a função retorna >1 , caso string1<string2 a função retorna<1 , casos string1==string2 , a função retorna 0;
+     strcmp("Abacate", "Bola") = retorna um valor int de acordo com a comparação de cada caracter das duas string's pela tabela ASCII , caso string1>string2 a função retorna >1 , caso string1<string2 função retorna<1 , casos string1==string2 , a função retorna 0;
 
    
      strcoll("Abacate" , "Bola") = realiza a comparação de caracter a caracter das duas string , porém ao inves de usar a tabela ASCII como padrão de comparação , usa-se ordem de collation;
