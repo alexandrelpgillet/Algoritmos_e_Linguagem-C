@@ -23,6 +23,13 @@ int main()
     
     //Alocando memória de forma dinâmica para Contato, o tamanho é o tamanho da struct Agenda*1000;
     Contato= malloc(sizeof(Agenda)*1000);
+
+
+    if(Contato==NULL)
+    {
+        printf("ERRO DURANTE ALOCAÇÃO DE MEMÓRIA\n");
+        return -1;
+    }
     
     //Preenchendo 1000 contatos no ponteiro *Contato
     for(int i=0 ; i<1000 ; i++)
