@@ -1,112 +1,66 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-typedef struct V
-{
-    int num;
-
-}Vetor;
 
 
-int quant_search =0;
 
+int binary_search(int *V , int X ,int begginng , int end ){
+     
+     if(begginng==end)
+     {
 
-unsigned int busca_binaria(Vetor *Lista_numeros, unsigned int  busca , unsigned int extremidade_baixa , unsigned int  extremidade_alta)
-{
+        if(V[begginng]==X)
+        {
+           return begginng;
+        }
+        else 
+        {
+            return -1;
+        }
 
-    printf("EXTREMIDADE BAIXA %u: EXTREMIDADE ALTA %u\n" , extremidade_baixa, extremidade_alta);
+     }
+     else
+     {
 
-    quant_search+=1;
+        int middle;
 
-    unsigned int posicao = (extremidade_baixa+extremidade_alta)/2;
+        middle = (begginng+end)/2;
 
-
-    if(busca==(Lista_numeros+posicao)->num)
-    {
-        return posicao;
-
-    }
-    else
-    {
-
-        if(extremidade_alta==extremidade_baixa)
+        if(X>V[middle])
         {
 
-            return -1;
+            binary_search(V , X,middle+1 , end);
+
+        }
+        else
+        {
+
+            binary_search(V , X ,  begginng , middle);
+
 
         }
 
-    }
 
-
-
-    if(busca<(Lista_numeros+posicao)->num)
-    {
-
-        return busca_binaria(Lista_numeros, busca , extremidade_baixa , posicao-1);
-
-    }
-
-    if(busca>(Lista_numeros+posicao)->num)
-    {
-
-        return busca_binaria(Lista_numeros, busca , posicao+1 , extremidade_alta);
-
-    }
-
-
+     }
 
 
 
 }
 
 
-
 int main()
 {
-    unsigned int i;
 
-    unsigned int  busca;
+    int V[10] = {1,2,3,4,5,6,7,8,9};
 
-    unsigned int tamanho_vetor = 100000000;
+    
+    int pos;
 
-    Vetor *Lista_numeros;
+    pos= binary_search(V , 5 , 0 , 9);
 
-    Lista_numeros = (Vetor*) malloc(sizeof(Vetor)*tamanho_vetor);
-
-
-    for(i=0  ; i<tamanho_vetor ; i++)
-    {
-        (Lista_numeros+i)->num =i;
-
-    }
-
-
-
-    srand(time(NULL)*time(NULL));
-
-    busca=rand()%tamanho_vetor;
+    printf("Posicao do elemento : %d", pos);
 
 
 
 
-    int x = busca_binaria(Lista_numeros, busca, 0, tamanho_vetor-1);
-
-    printf("\n\n\n\n");
-
-    printf("O NUMERO BUSCADO E %u\n", busca);
-
-    if(x== 0) {
-
-        printf("Não foi encontrado o elemento no vetor\n");
-    }
-    else {
-
-        printf("POSICAO DO ELEMENTO BUSCADO:%u\n", x);
-
-    }
-
-    printf("QUANTIDADE DE BUSCAS : %d\n" , quant_search );
 
 
 }
