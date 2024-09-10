@@ -4,7 +4,7 @@
 
 int binary_search(int *V , int X ,int begginng , int end ){
      
-     if(begginng==end)
+     if(begginng>=end)
      {
 
         if(V[begginng]==X)
@@ -49,7 +49,7 @@ int binary_search(int *V , int X ,int begginng , int end ){
 int main()
 {
 
-    int V[10] = {1,2,3,4,5,6,7,8,9};
+    int V[10] = {1,2,3,4,5,6,7,8,9,10};
 
     
     int pos;
